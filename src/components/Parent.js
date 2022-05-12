@@ -10,7 +10,7 @@ export default function Parent({ children }) {
       <h1>parent component</h1>
       <button onClick={() => setChange(change + 1)}>ParentChange</button>
       <button onClick={() => setChild(child + 1)}>ChildChange</button>
-      <MemoChild num={child} />
+      <MemoChild />
     </>
   );
 }
