@@ -1,6 +1,7 @@
 import React from "react";
 
 function Child({ num }) {
+  
   console.log("child component render");
   return (
     <>
