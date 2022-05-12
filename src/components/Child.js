@@ -5,7 +5,7 @@ function Child({ num }) {
   return (
     <>
       <div>Child</div>
-      <p>{`Number : ${num}`}</p>
+      <p>{`Number : ${num.value}`}</p>
     </>
   );
 }
