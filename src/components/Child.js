@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Child({num}) {
+function Child({ num }) {
   console.log("child component render");
   return (
     <>
@@ -9,3 +9,5 @@ export default function Child({num}) {
     </>
   );
 }
+
+export const MemoChild = React.memo(Child);
