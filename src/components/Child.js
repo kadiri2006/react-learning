@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Child() {
+export default function Child({num}) {
   console.log("child component render");
   return (
     <>
       <div>Child</div>
-      {/* <p>{`Number : ${number}`}</p> */}
+      <p>{`Number : ${num}`}</p>
     </>
   );
 }
