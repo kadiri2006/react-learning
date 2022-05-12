@@ -7,7 +7,7 @@ export default function Parent() {
   return (
     <>
       <h1>parent component</h1>
-      <button onClick={() => setChange(++change)}>stateChange</button>
+      <button onClick={() => setChange(change + 1)}>stateChange</button>
       <Child />
     </>
   );
