@@ -14,9 +14,7 @@ export default function Parent({ children }) {
       <button onClick={() => setfirst(first + 1)}>
         Parent btn state change
       </button>
-      <ParentContext.Provider value={first}>
-        <ChildMemmo />
-      </ParentContext.Provider>
+      {children}
     </>
   );
 }
