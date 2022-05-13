@@ -15,7 +15,7 @@ export default function Parent({ children }) {
         Parent btn state change
       </button>
       <ParentContext.Provider value={first}>
-        <Child />
+        <ChildMemmo />
       </ParentContext.Provider>
     </>
   );
