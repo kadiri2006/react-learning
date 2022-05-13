@@ -10,9 +10,7 @@ export default function App() {
     <>
       <strong>App</strong>
       <button onClick={()=>setfirst(!first)}>btn at app state chage</button>
-      <Parent>
-        <Child />
-      </Parent>
+      <Parent/>
     </>
   );
 }

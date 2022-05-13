@@ -1,7 +1,9 @@
-import React, {useState } from "react";
+import React, { createContext, useContext, useState } from "react";
+import Child from "./Child";
 
 export default function Parent({ children }) {
   const [first, setfirst] = useState(0);
+  const ParentContext = createContext(null);
   console.log("render parent");
 
   return (
@@ -10,7 +12,9 @@ export default function Parent({ children }) {
       <button onClick={() => setfirst(first + 1)}>
         Parent btn state change
       </button>
-      {children}
+      <ParentContext.Provider value={first}>
+        <Child />
+      </ParentContext.Provider>
     </>
   );
 }
