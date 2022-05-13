@@ -1,9 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
-import Child from "./Child";
+import Child, { ChildMemmo } from "./Child";
+import Child2 from "./Child2";
+import { ParentContext } from "./pc";
 
 export default function Parent({ children }) {
   const [first, setfirst] = useState(0);
-  const ParentContext = createContext(null);
+
   console.log("render parent");
 
   return (
