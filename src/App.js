@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import Parent from "./Parent";
 
 export default function App() {
-  return (
-    <div>App</div>
-  )
+  console.log("render App");
+
+  return <Parent />;
 }
