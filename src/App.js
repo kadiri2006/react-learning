@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from "react";
+import Parent from "./Parent";
 
 export default function App() {
+  const [first, setfirst] = useState(0);
   return (
-    <div>App</div>
-  )
+    <>
+      <button onClick={() => setfirst(first + 1)}>chan:state in App</button>
+      <div>App</div>
+      <Parent first={first} />
+    </>
+  );
 }
