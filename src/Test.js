@@ -1,22 +1,28 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Test() {
-  const [num, setNum] = useState(1);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    setInterval(() => {
-      console.log("log at inside of interval", num);
-      setNum((e) => {
-        console.log("log at inside of setter",e);
-        return e + 1;
+    async function fetchData() {
+      const response = await fetch("https://api.rapidmock.com/mocks/Q97DX", {
+        headers: {
+          "x-rapidmock-delay": 100,
+        },
       });
-    }, 5000);
+      let data = await response.json();
+      setData(data);
+    }
+    fetchData();
   }, []);
-  console.log("log at outside of useEffect", num);
+
+  console.log(data);
   return (
     <>
       <p>test</p>
-      <p>{num}</p>
+
+      {data.length > 0 ? data.map((d) => <li key={d.id}>{d.title}</li>) : null}
     </>
   );
 }
