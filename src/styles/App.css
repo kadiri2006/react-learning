@@ -1,0 +1,8 @@
+.myFlex {
+    display: flex;
+
+}
+
+.myFlexChild{
+    flex: 1;
+}
